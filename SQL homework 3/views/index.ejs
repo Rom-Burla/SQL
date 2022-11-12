@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+</head>
+<body>
+    <h1>Our Games: </h1>
+    <% result.forEach((game)=>{ %>
+        <h3>Game: <%=game.name%></h3>
+        <h3>Platforms: <%=game.platforms%></h3>
+        <h3>Rating: <%=game.metacritic_rating%></h3>
+        <h3>Price: <%=game.price%></h3>
+        <a href="/update/<%=game.id%>">🖉</a>
+        <a href="/delete/<%=game.id%>">🗑</a>
+        <%})%>
+        <br>
+<button><a href="/add">Add new game &plus;</a> </button>
+</body>
+</html>

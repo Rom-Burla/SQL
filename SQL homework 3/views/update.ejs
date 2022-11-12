@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update <%=result[0].name%></title>
+</head>
+<body>
+    <button><a href="/games">back</a></button>
+
+    <h1>You are updating  game <%=result[0].name%></h1>
+    <form action="/updateGame/<%=result[0].id%>" method="post">
+    <div>
+        <label for="">Platforms (Add , between each platform)</label>
+        <input type="text" name="Platforms" placeholder="Write the platforms the game can be played on">
+    </div>
+    <div>
+        <label for="">Metacritic Rating</label>
+        <input type="text" name="Rating" placeholder="Write the rating the game got on Metacritic">
+    </div>
+    <div>
+        <label for="">Price $</label>
+        <input type="text" name="Price" placeholder="Write the price you are selling the game">
+    </div>
+
+    <button type="submit">Submit 🖉</button>
+    </form>
+</body>
+</html>

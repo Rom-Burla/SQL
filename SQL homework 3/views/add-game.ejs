@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Game</title>
+</head>
+<body>
+    <a href="/games">back</a>
+
+    <h1>Add a new game</h1>
+<form action="/addGame" method="post">
+    <div>
+        <label for="">Name</label>
+        <input type="text" name="Game" placeholder="Write the name of the game">
+    </div>
+    <div>
+        <label for="">Platforms (Add , between each platform)</label>
+        <input type="text" name="Platforms" placeholder="Write the platforms the game can be played on">
+    </div>
+    <div>
+        <label for="">Metacritic Rating</label>
+        <input type="text" name="Rating" placeholder="Write the rating the game got on Metacritic">
+    </div>
+    <div>
+        <label for="">Price $</label>
+        <input type="text" name="Price" placeholder="Write the price you are selling the game">
+    </div>
+
+    <button type="submit">Submit &plus;</button>
+    </form>
+</body>
+</html>
