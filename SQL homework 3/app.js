@@ -83,6 +83,7 @@ app.post("/updateGame/:id", (req, res) => {
 
 app.get("/update/:id", (req, res) => {
   let id = req.params.id;
+  console.log(req.params);
   let query = `SELECT * FROM games WHERE \`id\` = ${id}`;
   connection.query(query, (err, result) => {
     if (err) console.log(err);
