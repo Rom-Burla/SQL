@@ -1,0 +1,22 @@
+body{
+    background-color: aquamarine;
+    text-align: center;
+}
+.container{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.game{
+    border: 2px solid;
+    width: 30vw;
+}
+label{
+    margin-right: 10px;
+}
+input{
+    margin: 10px;
+}
+button{
+    margin: 20px;
+}

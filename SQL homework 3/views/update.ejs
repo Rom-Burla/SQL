@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <%- include('./partials/headers.ejs')%>
+      <link rel="stylesheet" href="/css/style.css">
     <title>Update <%=result[0].name%></title>
-</head>
-<body>
+    <%- include('./partials/navBar.ejs')%>
     <button><a href="/games">back</a></button>
 
     <h1>You are updating  game <%=result[0].name%></h1>
     <form action="/updateGame/<%=result[0].id%>" method="post">
     <div>
+    <div>
+        <label for="">Genre</label>
+       <select name="Genre" id="">
+       <% result[1].forEach((genre)=>{%>
+        <option value="<%=genre.id%>"><%=genre.name%></option>
+       <%})%>
+       </select>
+    </div>
         <label for="">Platforms (Add , between each platform)</label>
         <input type="text" name="Platforms" placeholder="Write the platforms the game can be played on">
     </div>
