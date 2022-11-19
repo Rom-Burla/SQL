@@ -1,0 +1,39 @@
+<%-include('./partials/header.ejs')%>
+<link rel="stylesheet" href="./css/style.css">
+<script src="./app/index.js" type="module"></script>
+<title>הרשמה למועדון לקוחות</title>
+<%-include('./partials/navbar.ejs')%>
+
+<h1>הרשמה למועדון הלקוחות שלנו</h1>
+
+<form action="/registration" method="post">
+   <div>
+    <label for="">שם מלא</label>
+    <input type="text" name="name">
+</div>
+   <div>
+    <label for=>טלפון</label>
+    <input type="text" name="phone">
+</div>
+   <div>
+    <label for="">טלפון נוסף</label>
+    <input type="text" name="otherPhone">
+</div>
+   <div>
+    <label for="">רחוב</label>
+    <input type="text" name="street">
+</div>
+   <div>
+    <label for="">מספר בית</label>
+    <input type="text" name="houseNum">
+</div>
+   <div>
+    <label for="">מספר דירה</label>
+    <input type="text" name="apartementNum">
+</div>
+   <div>
+    <label for="">עיר</label>
+    <input type="text" name="city">
+</div>
+<button>הרשם</button>
+</form>
