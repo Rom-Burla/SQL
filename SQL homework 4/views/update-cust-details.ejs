@@ -1,0 +1,38 @@
+<%-include('./partials/header.ejs')%>
+<link rel="stylesheet" href="/css/style.css">
+<script src="./app/index.js" type="module"></script>
+<title><%=result[0].name%> עדכון פרטים</title>
+<%-include('./partials/navbar.ejs')%>
+
+<h1><%=result[0].name%> עדכון פרטי משתמש</h1>
+<form action="/update/<%=result[0].id%>" method="post" class="registration-form">
+   <div>
+    <label for="">שם מלא</label>
+    <input type="text" name="name" value="<%=result[0].name%>">
+</div>
+   <div>
+    <label for="">טלפון</label>
+    <input type="text" name="phone" value="<%=result[0].phone%>">
+</div>
+   <div>
+    <label for="">טלפון נוסף</label>
+    <input type="text" name="otherPhone" value="<%=result[0].other_phone%>">
+</div>
+   <div>
+    <label for="">רחוב</label>
+    <input type="text" name="street" value="<%=result[0].str_address%>">
+</div>
+   <div>
+    <label for="">מספר בית</label>
+    <input type="text" name="houseNum" value="<%=result[0].house_num%>">
+</div>
+   <div>
+    <label for="">מספר דירה</label>
+    <input type="text" name="apartementNum" value="<%=result[0].apartement_num%>">
+</div>
+   <div>
+    <label for="">עיר</label>
+    <input type="text" name="city" value="<%=result[0].city%>">
+</div>
+<button>עדכן פרטי משתמש</button>
+</form>

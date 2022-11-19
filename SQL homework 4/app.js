@@ -162,8 +162,17 @@ app.get('/customer-club', (req, res) => __awaiter(void 0, void 0, void 0, functi
         res.render("index.ejs", { result });
     });
 }));
-app.get('/registration', (req, res) => {
+app.get('/customer-club/registration', (req, res) => {
     res.render('registration.ejs');
+});
+app.get('/customer-club/update/:id', (req, res) => {
+    let id = req.params.id;
+    let query = `SELECT * FROM users WHERE id = ${id}`;
+    connection.query(query, (err, result) => {
+        if (err)
+            console.log(err);
+        res.render('update-cust-details.ejs', { result });
+    });
 });
 // redirect by phone
 app.post('/getCustPhone', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
@@ -188,7 +197,7 @@ app.post('/getCustPhone', (req, res) => __awaiter(void 0, void 0, void 0, functi
                         res.render("customer.ejs", { result });
                     }
                     else {
-                        res.redirect("/registration");
+                        res.redirect("/customer-club/registration");
                     }
                 });
             }));
@@ -213,11 +222,28 @@ app.post('/childReg', (req, res) => {
     connection.query(query, (err, result) => {
         if (err)
             console.log(err);
-        let query = `SELECT * FROM users JOIN child_age ON users.id = child_age.child_id`;
+        let query = `SELECT * FROM \`users\` JOIN child_age ON id = child_age.user_id WHERE id = ${user_id}`;
         connection.query(query, (err, result) => {
-            res.redirect('back');
+            if (result.length > 1) {
+                res.redirect('back');
+            }
+            else {
+                res.redirect('/customer-club');
+            }
         });
     });
+});
+// update user details
+app.post('/update/:id', (req, res) => {
+    let id = req.params.id;
+    let { name, phone, otherPhone, street, houseNum, apartementNum, city } = req.body;
+    let query = `UPDATE \`users\` SET \`name\`='${name}',\`phone\`='${phone}',\`other_phone\`='${otherPhone}',\`str_address\`='${street}',\`house_num\`='${houseNum}',\`apartement_num\`='${apartementNum}',\`city\`='${city}' WHERE \`id\` = ${id}`;
+    connection.query(query, (err, result) => {
+        if (err)
+            throw err;
+        console.log(result);
+    });
+    res.redirect('/customer-club');
 });
 app.listen(port, (err) => {
     if (err) {

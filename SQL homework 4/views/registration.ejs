@@ -1,18 +1,19 @@
 <%-include('./partials/header.ejs')%>
-<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="/css/style.css">
 <script src="./app/index.js" type="module"></script>
 <title>הרשמה למועדון לקוחות</title>
 <%-include('./partials/navbar.ejs')%>
 
+
 <h1>הרשמה למועדון הלקוחות שלנו</h1>
 
-<form action="/registration" method="post">
+<form action="/registration" method="post" class="registration-form">
    <div>
     <label for="">שם מלא</label>
     <input type="text" name="name">
 </div>
    <div>
-    <label for=>טלפון</label>
+    <label for="">טלפון</label>
     <input type="text" name="phone">
 </div>
    <div>
