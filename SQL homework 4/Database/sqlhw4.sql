@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 19, 2022 at 05:19 AM
+-- Generation Time: Nov 20, 2022 at 02:10 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -48,7 +48,13 @@ INSERT INTO `child_age` (`child_id`, `child_name`, `age`, `user_id`) VALUES
 (7, 'בר', 2, 11),
 (10, 'איציק', 5, 5),
 (11, 'רועי', 10, 5),
-(12, 'רונית', 2, 10);
+(12, 'רונית', 2, 10),
+(25, 'דויד אלקיים', 2, 12),
+(26, 'אלון ג\'וניור', 15, 12),
+(28, 'אביאל', 10, 5),
+(29, 'אריאל', 3, 5),
+(30, 'מורדי ג\'וניור', 2, 9),
+(31, 'רז', 1, 9);
 
 -- --------------------------------------------------------
 
@@ -97,12 +103,13 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `phone`, `other_phone`, `str_address`, `house_num`, `apartement_num`, `city`) VALUES
-(5, 'רום בורלא', '0507273518', '', 'שדרות ירושלים', '40', '4', 'חולון'),
+(5, 'רום בורלא', '0507273518', '0527891654', 'שדרות ירושלים', '40', '4', 'חולון'),
 (6, 'אבי בוזגלו', '0523334897', '0501234567', 'אבו חצירא', '8 א\'', '', 'קריית מלאכי'),
 (7, 'אלדר אברמוביץ\'', '0527425389', '0549876543', 'אביתר הכהן', '10', '20', 'באר שבע'),
 (9, 'מרדכי ויצמן', '0549658745', '', 'ז\'בונטינסקי', '60', '3', 'נהריה'),
 (10, 'עירית זינגר', '0556455876', '', 'הרצוג', '78', '22', 'רמת גן'),
-(11, 'גבי אפללו', '0548712645', '', 'ביאליק', '15', '9', 'בת ים');
+(11, 'גבי אפללו', '0548712645', '', 'ביאליק', '15', '9', 'בת ים'),
+(12, 'אלון בסון', '0527712460', '0543217845', 'הודיה', '3', 'ד', 'גן יבנה');
 
 --
 -- Indexes for dumped tables
@@ -137,13 +144,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `child_age`
 --
 ALTER TABLE `child_age`
-  MODIFY `child_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `child_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- Constraints for dumped tables
