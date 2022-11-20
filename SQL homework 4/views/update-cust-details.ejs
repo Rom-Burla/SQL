@@ -1,38 +1,38 @@
 <%-include('./partials/header.ejs')%>
 <link rel="stylesheet" href="/css/style.css">
-<script src="./app/index.js" type="module"></script>
+<script src="/app/update.js" type="module"></script>
 <title><%=result[0].name%> עדכון פרטים</title>
 <%-include('./partials/navbar.ejs')%>
 
 <h1><%=result[0].name%> עדכון פרטי משתמש</h1>
-<form action="/update/<%=result[0].id%>" method="post" class="registration-form">
+<form action="/update/<%=result[0].id%>" method="post" class="registration-form" id="update-form">
    <div>
     <label for="">שם מלא</label>
-    <input type="text" name="name" value="<%=result[0].name%>">
+    <input type="text" name="name" value="<%=result[0].name%>" id="upName">
 </div>
    <div>
     <label for="">טלפון</label>
-    <input type="text" name="phone" value="<%=result[0].phone%>">
+    <input type="text" name="phone" value="<%=result[0].phone%>" id="upPhone">
 </div>
    <div>
     <label for="">טלפון נוסף</label>
-    <input type="text" name="otherPhone" value="<%=result[0].other_phone%>">
+    <input type="text" name="otherPhone" value="<%=result[0].other_phone%>" id="upOtherPhone">
 </div>
    <div>
     <label for="">רחוב</label>
-    <input type="text" name="street" value="<%=result[0].str_address%>">
+    <input type="text" name="street" value="<%=result[0].str_address%>" id="upStreet">
 </div>
    <div>
     <label for="">מספר בית</label>
-    <input type="text" name="houseNum" value="<%=result[0].house_num%>">
+    <input type="text" name="houseNum" value="<%=result[0].house_num%>" id="upHouseNum">
 </div>
    <div>
     <label for="">מספר דירה</label>
-    <input type="text" name="apartementNum" value="<%=result[0].apartement_num%>">
+    <input type="text" name="apartementNum" value="<%=result[0].apartement_num%>" id="upApartementNum">
 </div>
    <div>
     <label for="">עיר</label>
-    <input type="text" name="city" value="<%=result[0].city%>">
+    <input type="text" name="city" value="<%=result[0].city%>" id="upCity">
 </div>
 <button>עדכן פרטי משתמש</button>
 </form>
