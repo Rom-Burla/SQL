@@ -1,5 +1,7 @@
 ## \* Hi read before you start the app:
 
+## \* The purpose of this app is to select a specific customer in the attached sql database by his phone number and let him/her see and update his/her details
+
 ## \* first open the folder the app files are on with vscode
 
 ## \* to start the app you first need to download xampp and start apache and my sql
